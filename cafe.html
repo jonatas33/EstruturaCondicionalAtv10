@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estrutura condicional alinhada</title>
+</head>
+<body>
+
+
+    <h1>Escolha o Tipo do Seu Café ou</h1>
+    <button onclick="teste()"> Clique para Iniciar </button>
+    <section id="result"> 
+        <p>O resultado sera apresentado aqui...</p>
+    </section>
+
+    <script>
+        function teste(){
+            var num = Number(window.prompt('Digite 1 para Café Quente , 2 para Café Gelado ou 3 para Leite:'))
+            if (num == 1) {
+                var num = Number(window.prompt('Digite 1 para adoçado ou 2  para sem açaucar'))
+                if (num == 1) {
+                    var resposta = "Café quente e adoçado."
+                }
+                else {
+                    var resposta = "Café quente sem açucar."
+                }               
+            }
+            
+            else{
+                if (num ==2 ){
+                    var num = Number(window.prompt('Digite 1 Com Leite ou 2  para puro'))
+                    if(num ==2){
+                        var resposta = "Café Gelado com Leite."
+                    }
+                    else{
+                        var resposta = "Café Gelado Puro."
+                    }
+                }
+                else if(num ==3){
+                    var num = Number(window.prompt('Digite 1 Para Leite Gelado ou 2  para Leite Quente'))
+                    if(num ==3){
+                        var resposta = "Leite Gelado."
+                    
+                    }
+                    else{
+                        var resposta = "Leite Quente."
+                    }
+                   
+                }
+                
+            }
+ 
+            var res = document.querySelector('section#result')
+            res.innerHTML = `<p>Você escolheu ${resposta}!</p>`
+
+        }
+    </script>
+
+    
+</body>
+
+
+
+</html>

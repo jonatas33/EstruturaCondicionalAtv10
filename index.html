@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estrutura condicional alinhada</title>
+</head>
+<body>
+
+
+    <h1>O numero é par ou impar, e maior que 50?</h1>
+    <button onclick="teste()"> Clique para Iniciar </button>
+    <section id="result"> 
+        <p>O resultado sera apresentado aqui...</p>
+    </section>
+
+    <script>
+        function teste(){
+            var num = Number(window.prompt('Digite um numero:'))
+            if (num % 2 == 0) {
+                if (num  >50){
+                    var tipo = '<strong>par e maior que 50</strong>'
+                }
+                else if(num <50){
+                    var tipo = '<strong>par e menor que 50</strong>'
+                }
+                else { 
+                    var tipo = '<strong>par e igual 50</strong>'
+
+                }
+            }
+            else{
+                if (num  >50){
+                    var tipo = '<strong>impar e maior que 50</strong>'
+                }
+                else if(num < 50){
+                    var tipo = '<strong>impar e menor que 50</strong>'
+                }
+                
+            }
+ 
+            var res = document.querySelector('section#result')
+            res.innerHTML = `<p>O numero ${num} que foi digitado e ${tipo}!</p>`
+
+        }
+    </script>
+
+    
+</body>
+
+
+
+</html>
